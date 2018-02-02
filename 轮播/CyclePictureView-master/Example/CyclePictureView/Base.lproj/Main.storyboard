@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dGt-PA-Udc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CyclePictureView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayh-LN-QZW">
+                                <rect key="frame" x="95.5" y="214" width="184" height="30"/>
+                                <state key="normal" title="使用网络图片的图片轮播器"/>
+                                <connections>
+                                    <segue destination="g95-S2-Ybr" kind="show" id="Cja-wh-oRR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4p-dE-cDB">
+                                <rect key="frame" x="95.5" y="164" width="184" height="30"/>
+                                <state key="normal" title="使用本地图片的图片轮播器"/>
+                                <connections>
+                                    <segue destination="ks5-4t-EHh" kind="show" id="KUu-Ka-v7t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcR-4i-e2z">
+                                <rect key="frame" x="156.5" y="264" width="62" height="30"/>
+                                <state key="normal" title="测试滚动"/>
+                                <connections>
+                                    <segue destination="nDy-vq-XE7" kind="show" id="NZf-na-Fbw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ayh-LN-QZW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3ev-s9-99Q"/>
+                            <constraint firstItem="t4p-dE-cDB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8UL-46-aZN"/>
+                            <constraint firstItem="DcR-4i-e2z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JIN-FW-QjS"/>
+                            <constraint firstItem="ayh-LN-QZW" firstAttribute="top" secondItem="t4p-dE-cDB" secondAttribute="bottom" constant="20" id="cfF-6s-RgV"/>
+                            <constraint firstItem="DcR-4i-e2z" firstAttribute="top" secondItem="ayh-LN-QZW" secondAttribute="bottom" constant="20" id="l0X-YT-kQY"/>
+                            <constraint firstItem="t4p-dE-cDB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="yQr-vB-Kal"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2E2-3t-1Mq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="297"/>
+        </scene>
+        <!--Test Table View Controller-->
+        <scene sceneID="7Yb-Oo-Pfa">
+            <objects>
+                <tableViewController id="nDy-vq-XE7" customClass="TestTableViewController" customModule="CyclePictureView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jl5-De-x77">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Myb-fF-o4Y">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Myb-fF-o4Y" id="AJE-Lr-Sp0">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nDy-vq-XE7" id="tVE-h8-gdP"/>
+                            <outlet property="delegate" destination="nDy-vq-XE7" id="gQE-QV-dd7"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K5p-op-eua" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784" y="1169"/>
+        </scene>
+        <!--Web Picture Controller-->
+        <scene sceneID="mcT-wh-376">
+            <objects>
+                <viewController id="g95-S2-Ybr" customClass="WebPictureController" customModule="CyclePictureView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m4L-M5-puP"/>
+                        <viewControllerLayoutGuide type="bottom" id="bqs-up-vb0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3DH-Sn-GGY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ep4-oH-3wp">
+                                <rect key="frame" x="0.0" y="164" width="375" height="200"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="62c-ub-Hdh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ep4-oH-3wp" firstAttribute="leading" secondItem="3DH-Sn-GGY" secondAttribute="leading" id="7Ox-n2-MXL"/>
+                            <constraint firstAttribute="trailing" secondItem="Ep4-oH-3wp" secondAttribute="trailing" id="GdS-J6-kER"/>
+                            <constraint firstItem="Ep4-oH-3wp" firstAttribute="top" secondItem="m4L-M5-puP" secondAttribute="bottom" constant="100" id="v7Z-2c-bth"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cyclePictureView" destination="Ep4-oH-3wp" id="Ta2-lv-650"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8u-e8-4s1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="474"/>
+        </scene>
+        <!--Local Picture Controller-->
+        <scene sceneID="YE4-V8-NZC">
+            <objects>
+                <viewController id="ks5-4t-EHh" customClass="LocalPictureController" customModule="CyclePictureView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vha-gO-2eV"/>
+                        <viewControllerLayoutGuide type="bottom" id="yEO-sN-bgn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Nm-si-Div">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gr-Ec-6WK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853" y="-198"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bMC-p5-mAg">
+            <objects>
+                <navigationController id="dGt-PA-Udc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IfS-6I-QOP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wsA-61-gUQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ec2-sM-ybT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-630" y="309"/>
+        </scene>
+    </scenes>
+</document>
