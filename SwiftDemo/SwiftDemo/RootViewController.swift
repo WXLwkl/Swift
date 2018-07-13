@@ -18,6 +18,7 @@ class RootViewController: UIViewController {
         view.backgroundColor = UIColor.white
         title = "随便点击页面，看看效果"
         
+        UITableView
         
         let v = UILabel(frame: CGRect(x: 50, y: 100, width: 50, height: 50));
         v.backgroundColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
