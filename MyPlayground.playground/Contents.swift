@@ -33,12 +33,12 @@ class ViewController: UIViewController {
         
     }
     @objc func click(_ item: UIButton) {
-        if view.backgroundColor == .yellow {
-            view.backgroundColor = .cyan
-        } else {
-            view.backgroundColor = .yellow
-        }
+        view.backgroundColor = randomColor()
     }
+    private func randomColor() -> UIColor {
+        return UIColor(red: CGFloat(arc4random_uniform(255)) / 255.0, green: CGFloat(arc4random_uniform(255)) / 255.0, blue: CGFloat(arc4random_uniform(255)) / 255.0, alpha: 1.0)
+    }
+    
 }
 
 let viewConroller = ViewController()

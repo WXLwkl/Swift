@@ -16,8 +16,17 @@ class PresentBottomController: UIPresentationController {
             view.frame = frame;
         }
         view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissVC(_:)))
+        view.addGestureRecognizer(tap)
         return view
     }()
+    
+    @objc func dismissVC(_ gesture: UITapGestureRecognizer) {
+        let point: CGPoint = gesture.location(in: self.blackView)
+        if !frameOfPresentedViewInContainerView.contains(point) {
+            presentedViewController.dismiss(animated: true)
+        }
+    }
     
     public var controllerHeight: CGFloat // controller高度
     

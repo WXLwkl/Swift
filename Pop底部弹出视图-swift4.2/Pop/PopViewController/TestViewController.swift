@@ -14,10 +14,15 @@ class TestViewController: PresentBottomVC {
         super.viewDidLoad()
 
         view.backgroundColor = .white
+        
+        let bview = UIView(frame: CGRect(x: 0, y: 290, width: 300, height: 8))
+        bview.backgroundColor = .red
+        view.addSubview(bview)
+        
     }
 
     override var controllerHeight: CGFloat? {
-        return 200;
+        return 300;
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

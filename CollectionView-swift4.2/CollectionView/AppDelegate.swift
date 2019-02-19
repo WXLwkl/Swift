@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Pop
+//  CollectionView
 //
-//  Created by xingl on 2018/7/12.
-//  Copyright © 2018年 xingl. All rights reserved.
+//  Created by xingl on 2019/1/25.
+//  Copyright © 2019 xingl. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
